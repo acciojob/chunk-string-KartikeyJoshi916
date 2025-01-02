@@ -3,11 +3,8 @@ function stringChop(str, size) {
 	let len=str.length;
 	let count=0;
 	if(len<size){
-		for(let j=0;j<len;j++){
-		subs+=str[count++];
-	}
-	arr.push(subs);
-	return arr;
+		arr.push(str);
+		return arr;
 	}
 	for(let i=0;i<str.length;i+=size){
 		let subs="";
