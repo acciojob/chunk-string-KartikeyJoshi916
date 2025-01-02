@@ -1,26 +1,10 @@
 function stringChop(str, size) {
-	let arr=[];
-	let len=str.length;
-	let count=0;
-	if(len<size){
-		arr.push(str);
-		return arr;
+	let arr = [];
+	for(let i = 0; i < str.length; i += size){
+		arr.push(str.substring(i, i + size));
 	}
-	for(let i=0;i<str.length;i+=size){
-		let subs="";
-		for(let j=0;j<size;j++){
-			subs+=str[count++];
-		}
-		len-=size;
-		arr.push(subs);
-	}
-	let subs="";
-	for(let j=0;j<len;j++){
-		subs+=str[count++];
-	}
-	arr.push(subs);
 	return arr;
-} 
+}
 
 // Do not change the code below
 const str = prompt("Enter String.");
